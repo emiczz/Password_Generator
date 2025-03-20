@@ -1,10 +1,9 @@
 import random
 import string
 
-#Cuando definimos una función en Python, le damos parámetros que son como "variables vacías" o "contenedores" que recibirán valores cuando la función sea llamada.
+
 def generador_contrasenas(longitud_contrasena,incluir_mayus,
 incluir_num,incluir_sim):
-#Estos parámetros no tienen valores todavía. Solo son nombres que dentro de la función se van a rellenar cuando la llamemos.
     caracteres = string.ascii_lowercase #incluye las letras de la a-z
 
     if (incluir_mayusculas in ["Si","si","s","SI"]):
@@ -21,7 +20,7 @@ incluir_num,incluir_sim):
 while True:
     try:
         longitud_contrasena = int(input("Ingrese la longitud de la contraseña (debe ser un número entero): "))
-        if longitud_contrasena > 0:  # Asegúrate de que la longitud sea positiva
+        if longitud_contrasena > 0:  # La longitud debe ser positiva
             break
         else:
             print("Por favor, ingrese un número mayor a 0.")
@@ -34,4 +33,3 @@ incluir_simbolos = input("Le gustaria que la contraseña incluya Simbolos?: ")
 #Cuando llamamos la función, le pasamos valores reales que se asignarán a esos parámetros. A estos valores se los llama argumentos
 contrasena = generador_contrasenas(longitud_contrasena,incluir_mayusculas,incluir_numeros,incluir_simbolos)
 print("Su nueva contraseña es: ", contrasena)  
-#Cuando llamás a una función en Python, los valores que pasás como argumentos deben estar en el mismo orden en que fueron definidos los parámetros en la función.
